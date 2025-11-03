@@ -36,32 +36,36 @@
             background-color: white;
             border-radius: 0.75rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            /* Reduced padding for space saving */
+            padding: 1.5rem 1rem;
+            margin-bottom: 0.5rem; /* Reduced margin */
+        }
+        h1 {
+            font-size: 2.25rem; /* Reduced main header size */
         }
         h2 {
-            font-size: 1.75rem;
+            font-size: 1.5rem; /* Reduced section header size */
             font-weight: 700;
             color: var(--color-dark-blue);
             border-bottom: 3px solid var(--color-very-pale);
             padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem; /* Reduced margin */
         }
         .step-box {
             background-color: var(--color-very-pale);
             border-radius: 0.5rem;
-            padding: 1rem; /* Reduced padding slightly */
+            padding: 0.75rem; /* Reduced internal padding */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-left: 5px solid var(--color-accent-orange);
             height: auto;
-            min-height: 9rem; /* Set a minimum height for all boxes (h-36 in Tailwind) */
+            min-height: 10.5rem; /* Adjusted minimum height for tighter fit */
             position: relative;
             display: flex;
             flex-direction: column;
         }
         .step-number {
-            width: 2.25rem;
-            height: 2.25rem;
+            width: 2rem; /* Reduced size */
+            height: 2rem;
             background-color: var(--color-dark-blue);
             color: white;
             border-radius: 9999px;
@@ -69,86 +73,85 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem; /* Reduced margin */
+            font-size: 1rem;
+            margin-bottom: 0.3rem; /* Reduced margin */
         }
         .step-title {
-            font-size: 1rem; /* Adjusted title size */
-            font-weight: 600;
-            color: var(--color-medium-blue);
-            margin-bottom: 0.4rem; /* Reduced margin */
+            font-size: 0.95rem; /* Adjusted title size */
+            font-weight: 700; /* Made title bolder */
+            color: var(--color-dark-blue);
+            margin-bottom: 0.3rem; /* Reduced margin */
         }
         .step-description {
-            font-size: 0.8125rem; /* Adjusted description size */
+            font-size: 0.8rem; /* Adjusted description size for space */
             color: var(--color-text-dark);
-            line-height: 1.2;
+            line-height: 1.25;
         }
         .flow-arrow-down {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Reduced arrow size */
             color: var(--color-medium-blue);
-            height: 1.5rem;
-            margin: 0.5rem 0;
+            height: 1rem; /* Reduced height */
+            margin: 0.25rem 0; /* Reduced margin */
         }
-        /* Hidden class for horizontal arrows */
         .flow-arrow-horizontal {
             display: none; 
         }
 
-        /* Reverting Step 7 specific styling to match others */
-        .step-7-box .step-number {
-            background-color: var(--color-dark-blue) !important; 
-            color: white !important;
-        }
-        .step-7-box .step-title {
-            color: var(--color-medium-blue) !important;
-        }
-        .step-7-box .step-description {
-            color: var(--color-text-dark) !important;
+        /* Responsive adjustments for mobile/smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .step-box {
+                min-height: 8.5rem; /* Further reduced height on small screens */
+            }
+            .step-description {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
     
-    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
-        <header class="text-center mb-10">
-            <h1 class="text-4xl font-bold text-dark-blue mb-2">END-TO-END OVERRIDE CONTROL: 7-STEP FLOW</h1>
-            <p class="text-xl text-medium-blue font-light">Mandatory Sequential Procedure for Production Team</p>
+    <div class="container mx-auto p-4 md:p-4 max-w-7xl">
+        <header class="text-center mb-6">
+            <h1 class="text-4xl font-bold text-dark-blue mb-1">OVERRIDE CONTROL MANDATORY PROCEDURE</h1>
+            <p class="text-lg text-medium-blue font-light">7-Step Sequential Flow for Implementation, Logging, and Accountability</p>
         </header>
 
         <section class="section-card">
-            <h2>Procedure Flow: Implementation, Logging, & Accountability</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-7 gap-y-4 md:gap-y-0 md:gap-x-4">
+            <div class="grid grid-cols-1 md:grid-cols-7 gap-y-2 md:gap-y-0 md:gap-x-2">
 
-                <!-- STEP 1: Authorization and Risk Assessment -->
+                <!-- STEP 1: Discussion & RA (Updated Title) -->
                 <div class="col-span-1 flex flex-col items-center">
                     <div class="step-box w-full">
                         <div class="step-number">1</div>
-                        <div class="step-title">Authorization & RA</div>
+                        <div class="step-title">Discussion & RA</div>
                         <p class="step-description">Panel Engineer discusses with Team Leader & Supervisor. Decision requires detailed Risk Assessment.</p>
                     </div>
                     <div class="flow-arrow-down md:hidden">↓</div>
                 </div>
 
-                <!-- STEP 2: Documentation (PSIC) -->
+                <!-- STEP 2: Authorization (Updated Title and Text) -->
                 <div class="col-span-1 flex flex-col items-center">
                     <div class="step-box w-full">
                         <div class="step-number">2</div>
-                        <div class="step-title">Documentation (PSIC)</div>
-                        <p class="step-description">Panel Engineer issues PSIC. Requires signature by Issuing Authority and written authorization by Production GM.</p>
+                        <div class="step-title">Authorization</div>
+                        <p class="step-description">Panel Engineer sign the PSIC as issuing authority and written authorization by Production GM.</p>
                     </div>
                     <div class="flow-arrow-down md:hidden">↓</div>
                 </div>
 
-                <!-- STEP 3: Duration and Renewal -->
+                <!-- STEP 3: Duration and Renewal (Updated Text) -->
                 <div class="col-span-1 flex flex-col items-center">
                     <div class="step-box w-full">
                         <div class="step-number">3</div>
                         <div class="step-title">Duration & Renewal</div>
-                        <p class="step-description">Maximum validity is 12 hours. Must re-implement/resign PSIC for extension. Reissue certificate weekly for long-term needs.</p>
+                        <p class="step-description">Maximum validity is 12 hours. Must resign PSIC for extension. Reissue certificate weekly for long-term needs.</p>
                     </div>
                     <div class="flow-arrow-down md:hidden">↓</div>
                 </div>
@@ -177,7 +180,7 @@
                 <div class="col-span-1 flex flex-col items-center">
                     <div class="step-box w-full">
                         <div class="step-number">6</div>
-                        <div class="step-title">Immediate Violation Reporting</div>
+                        <div class="step-title">Violation Reporting</div>
                         <p class="step-description">Any violation (e.g., missing signature, non-registered) must be addressed directly and immediately via email to the Production GM.</p>
                     </div>
                     <div class="flow-arrow-down md:hidden">↓</div>
@@ -187,7 +190,7 @@
                 <div class="col-span-1 flex flex-col items-center">
                     <div class="step-box w-full">
                         <div class="step-number">7</div>
-                        <div class="step-title">Monthly Trend Analysis</div>
+                        <div class="step-title">Trend Analysis</div>
                         <p class="step-description">Production Support creates Excel sheet to record violations, providing data for monthly analysis to identify trends and root causes.</p>
                         <p class="mt-1 text-xs font-semibold text-dark-blue">Drives Process Safety KPI (Tier 3.4 & 3.5)</p>
                     </div>
@@ -197,7 +200,7 @@
             
         </section>
         
-        <section class="section-card mt-8">
+        <section class="section-card mt-4">
             <div class="text-center text-lg text-dark-blue font-semibold">
                 <p>Failure to follow this sequence compromises safety barriers, increasing operational risk.</p>
             </div>
@@ -269,4 +272,3 @@
     </script>
 </body>
 </html>
-
